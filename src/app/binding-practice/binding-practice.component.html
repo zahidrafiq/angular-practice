@@ -1,0 +1,11 @@
+<input [value]="login1" (input)="setText($event)" />{{login1}} <br>
+<input [value]="login2" (input)="login2=$event.target.value" />{{login2}}<br>
+<input [(ngModel)] = "login3" />{{login3}} <br>
+
+<h2>Template Reference Variable</h2>
+Login: <input #login>
+<button (click)=ShowText(login)>Click Me</button>
+<br><br>
+Login: <input ref-myLogin>
+<button (click)=ShowText(myLogin)>Click Me</button>
+<br>
