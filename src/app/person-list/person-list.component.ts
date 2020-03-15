@@ -9,11 +9,14 @@ import { Person } from '../person';
 export class PersonListComponent implements OnInit {
   pList:Person[] = [];
   constructor() { }
-
+  count:number = 0;
   ngOnInit(): void {
     this.pList.push(new Person(1,"Zahid",25));
-    this.pList.push(new Person(1,"Zain",22));
-    this.pList.push(new Person(1,"Suleman",19));
+    this.pList.push(new Person(2,"Zain",22));
+    this.pList.push(new Person(3,"Suleman",19));
   }
-
+  UpdateCount(e){
+    this.count++;
+    //alert(e)
+  }
 }

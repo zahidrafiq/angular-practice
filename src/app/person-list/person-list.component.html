@@ -1,5 +1,7 @@
-<div *ngFor = "let per of pList">
-    ID: {{per.id}} <br>
+<p>Total Person count: {{count}}</p>
+<div *ngFor = "let p of pList">
+    <app-person [per]="p" (PersonCounted)="UpdateCount($event)"></app-person>
+    <!-- ID: {{per.id}} <br>
     Name: {{per.name}} <br>
-    Age: {{per.age}}
+    Age: {{per.age}} -->
 </div>

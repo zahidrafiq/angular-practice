@@ -1,3 +1,8 @@
+<div>
 ID: {{per.id}} <br>
 Name: {{per.name}} <br>
 Age: {{per.age}}
+<button *ngIf="!isCounted; else else_content" (click)="CountPerson()">Count Person</button>
+<ng-template #else_content><br>This Person is Counted</ng-template>
+</div>
+<br><br>
